@@ -8,6 +8,7 @@ body {
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: "Playfair Display", serif;;
 }
 
 h1 {
@@ -124,4 +125,10 @@ footer{
 
 #lastModified{
     color: yellow;
+}
+
+.flag{
+    float:left;
+    width: 200px;
+    margin: 40px;
 }
