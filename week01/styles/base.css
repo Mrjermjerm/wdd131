@@ -1,0 +1,127 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    background-color: #274D6D;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+header ul {
+    background-color: rgb(37, 36, 36);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+header li {
+    flex: 1;
+}
+
+header li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around; 
+    color: white;
+    padding: 15px; 
+    transition: color 0.3s; 
+}
+
+header li a:hover {
+    color: #FFD700;
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    margin: 20px; 
+    padding: 0px;
+    padding-top: 0;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+}
+
+.card h2{
+    background-color: #274D6D;
+    color: white;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 7px 0;
+    box-sizing: border-box; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card h3 {
+    text-align: center;
+    border-bottom: solid 2px black;
+    width: 500px;
+    margin: 0 auto; 
+}
+
+.card p{
+    padding: 10px;
+    margin:0;
+}
+
+.paragraph-box {    
+    padding: 10px; 
+    max-width: 400px; 
+    margin-left: 70px; 
+}
+
+.content {
+    overflow: auto; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile{
+    width: 100px;
+    max-width: 100%;
+    height: auto; 
+    margin-right: 80px; 
+    float: right;
+}
+
+footer{
+    background-color: #274D6D;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card li{
+    margin-top: 20px;
+}
+
+.card ul{
+    margin-top: 60px;
+    margin-left: 25px;
+}
+
+.state p{
+    margin: 6px 30px 20px 30px;
+}
+
+#lastModified{
+    color: yellow;
+}
