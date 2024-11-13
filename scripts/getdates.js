@@ -15,5 +15,5 @@ document.addEventListener("DOMContentLoaded", function() {
     if (lastModifiedElement) {
       lastModifiedElement.textContent = `Last modification on: ${lastModified}`;
     }
-  });
+});
   
