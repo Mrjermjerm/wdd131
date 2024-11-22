@@ -1,0 +1,116 @@
+/* Global Variables for North Carolina Flag Colors */
+:root {
+  --nc-red: #9e1b32; /* Red from the flag */
+  --nc-blue: #003366; /* Blue from the flag */
+  --nc-white: #ffffff; /* White from the flag */
+  --nc-gold: #f1bc00; /* Yellow/gold from the flag */
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--nc-white); /* White background */
+  color: var(--nc-blue); /* Default text color */
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--nc-blue); /* North Carolina Flag Blue */
+  color: var(--nc-white); /* White text */
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+/* Hero Image Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.hero picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full screen */
+}
+
+/* Weather and Data Section Styling */
+#data, #weather {
+  background-color: rgba(240, 240, 240, 0.817); /* Light background with transparency */
+  padding: 20px;
+  position: absolute;
+  z-index: 1; /* Ensure it's above the image */
+}
+
+/* Data Section */
+#data {
+  top: 10%; /* Position top left on large screens */
+  left: 5%;  /* Position to the left */
+  width: 30%; /* Adjust width */
+}
+
+#weather {
+  bottom: 5%; /* Position bottom right on large screens */
+  right: 5%;  /* Position to the right */
+  width: 30%;  /* Adjust width */
+  text-align: right; /* Align text to the right for weather */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--nc-blue); /* North Carolina Flag Blue */
+  color: var(--nc-white); /* White text */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Links */
+a {
+  color: var(--nc-blue); /* Blue links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--nc-red); /* Red on hover */
+}
+
+/* Data and Weather Sections on Small Screens */
+@media (max-width: 799px) {
+  #data, #weather {
+    position: relative; /* Remove absolute positioning on small screens */
+    left: 0%;
+    right: 0%;
+    width: 90%; /* Allow sections to take full width with some margin */
+    margin: 20px auto; /* Center the sections */
+    text-align: center; /* Center text */
+    padding: 15px;
+    background-color: rgba(240, 240, 240, 0.9); /* Make background a little more opaque */
+  }
+
+  #weather {
+    margin-top: 20px; /* Add margin between the sections */
+  }
+
+  /* Adjust Hero image height for small screens */
+  .hero {
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}

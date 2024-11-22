@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jeremy Sanders, WDD 131, Weather in North Carolina">
+    <meta name="author" content="Jeremy Sanders">
+    <link href="styles/place.css" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>North Carolina</title>
+  </head>
+  <body>
+    <header>
+      <h1>North Carolina</h1>
+    </header>
+
+    <main>
+      <!-- Hero Image Section -->
+      <div class="hero">
+        <picture>
+          <source srcset="images/northCarolinaPlace.webp" media="(min-width: 1000px)">
+          <source srcset="images/northCarolinaPlace.webp" media="(min-width: 799px)">
+          <img src="images/northCarolinaSmall.webp" alt="Temple name and location" width="500" height="250">
+        </picture>
+      
+        <section id="data">
+          <h2>Data</h2>
+          <p>Area: 53,819 square miles</p>
+          <p>Population: 10.7 million</p>
+          <p>Capital City: Raleigh</p>
+          <p>Languages: English, Spanish</p>
+          <p>Currency: United States Dollar (USD)</p>
+          <p>Time Zone: UTC -5 hours</p>
+          <p>Calling Code: +1</p>
+          <p>Internet TLD: .us</p>
+          <p id="windchill">Windchill: </p> 
+        </section>
+        <!-- Weather Section -->
+        <section id="weather">
+          <h2>Weather</h2>
+          <div id="weather-icon">⛅</div> 
+          <p>Temperature: 5°C</p>
+          <p>Conditions: Partly Cloudy</p>
+          <p>Wind: 10 km/h</p>
+          <p id="windchill">Windchill: </p> 
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>@<span id="currentyear"></span> 🐬 Jeremy Sanders 🐬 North Carolina</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
