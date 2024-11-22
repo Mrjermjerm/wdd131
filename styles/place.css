@@ -1,11 +1,10 @@
 
 :root {
-  --nc-red: #9e1b32; 
-  --nc-blue: #003366; 
-  --nc-white: #ffffff; 
-  --nc-gold: #f1bc00; 
+  --nc-red: #9e1b32;
+  --nc-blue: #003366;
+  --nc-white: #ffffff;
+  --nc-gold: #f1bc00;
 }
-
 
 * {
   margin: 0;
@@ -15,60 +14,55 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: var(--nc-white); 
-  color: var(--nc-blue); 
+  background-color: var(--nc-white);
+  color: var(--nc-blue);
 }
-
 
 header {
   text-align: center;
   padding: 10px;
-  background-color: var(--nc-blue); 
+  background-color: var(--nc-blue);
   border-bottom: var(--nc-red) solid 16px;
-  color: var(--nc-white); 
+  color: var(--nc-white);
 }
 
 h1 {
   font-size: 3rem;
 }
 
-
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   border-bottom: var(--nc-red) solid 4px;
 }
 
 .hero picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
-
 
 #data, #weather {
-  background-color: rgba(240, 240, 240, 0.817); 
+  background-color: rgba(240, 240, 240, 0.817);
   padding: 20px;
   position: absolute;
-  z-index: 1; 
+  z-index: 1;
 }
 
-
 #data {
-  top: 10%; 
-  left: 5%;  
-  width: 30%; 
+  top: 10%;
+  left: 5%;
+  width: 30%;
 }
 
 #weather {
-  bottom: 5%; 
-  right: 5%;  
-  width: 30%;  
-  text-align: right; 
+  bottom: 5%;
+  right: 5%;
+  width: 30%;
+  text-align: right;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 10px;
@@ -80,33 +74,46 @@ footer p {
   margin: 5px 0;
 }
 
-
-a {
-  color: var(--nc-blue); 
-  text-decoration: none;
-}
-
-
 @media (max-width: 799px) {
   #data, #weather {
-    position: relative; 
+    position: relative;
     left: 0%;
     right: 0%;
     width: 90%;
-    margin: 20px auto; 
-    text-align: center; 
+    margin: 20px auto;
+    text-align: center;
     padding: 15px;
-    background-color: rgba(240, 240, 240, 0.9); 
+    background-color: rgba(240, 240, 240, 0.9);
   }
 
   #weather {
     margin-top: 20px;
   }
 
+  /* Style the h2 in #weather */
+  #weather h2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  /* Use the same SVG icon that is inside the HTML in ::after pseudo-element */
+  #weather h2::after {
+    content: '';
+    display: inline-block;
+    margin-left: 10px;  /* Space between the text and the icon */
+    width: 50px;        /* Icon size */
+    height: 50px;       /* Icon size */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zY2hlbWUvMTk5OCIgdmVydGljYWwtY29sb3I9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+PHBhdGggZD0iTTEzMCAxMCBMMzAgMzAgTDEwIDQwIFoiIHN0cm9rZT0icmVkIiBzdHJva2Utd2lkdGg9IjMuNSIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik01MCAzMCBROTAgMjggNzAgMjAiIHN0cm9rZT0icmF5IiBzdHJva2Utd2lkdGg9IjMuMyIgZmlsbD0idHJhbnNwYXJlbnQiLz48L3N2Zz4=');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .hero picture img {
     border-bottom: var(--nc-gold) solid 4px;
   }
-  
+
   .hero {
     height: auto;
   }

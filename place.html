@@ -24,7 +24,7 @@
         <picture>
           <source srcset="images/northCarolinaPlace.webp" media="(min-width: 1000px)">
           <source srcset="images/northCarolinaPlace.webp" media="(min-width: 799px)">
-          <img src="images/northCarolinaSmall.webp" alt="Temple name and location" width="500" height="250">
+          <img src="images/walkway.webp" alt="Temple name and location" width="500" height="250">
         </picture>
       
         <section id="data">
@@ -37,12 +37,18 @@
           <p>Time Zone: UTC -5 hours</p>
           <p>Calling Code: +1</p>
           <p>Internet TLD: .us</p>
-          <p id="windchill">Windchill: </p> 
         </section>
         <!-- Weather Section -->
         <section id="weather">
           <h2>Weather</h2>
-          <div id="weather-icon">⛅</div> 
+          <div id="weather-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
+              <circle cx="30" cy="30" r="20" fill="yellow" />
+              <circle cx="50" cy="20" r="15" fill="lightgray" />
+              <circle cx="50" cy="50" r="20" fill="lightgray" />
+              <path d="M70 40 Q90 30 70 20" stroke="gray" stroke-width="3" fill="transparent"/>
+            </svg>
+          </div> 
           <p>Temperature: 5°C</p>
           <p>Conditions: Partly Cloudy</p>
           <p>Wind: 10 km/h</p>
