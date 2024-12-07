@@ -1,0 +1,117 @@
+
+ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #2c6787;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #327497;
+    box-sizing: border-box;
+}
+
+.subtext {
+    display: block; 
+    font-size: 0.9em; 
+    color: #747474; 
+    margin-top: 5px;
+    font-style: italic;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    border-radius: 4px;
+    padding: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="radio"] {
+    transform: scale(1.5); 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form{
+  margin: 30px 50px 30px 50px; 
+}
+
+.rating {
+  display: flex; /* Align items horizontally */
+  justify-content: center; /* Center the stars */
+  align-items: center;
+  flex-direction: row; /* Ensure stars are displayed left to right */
+}
+
+.rating input[type="radio"] {
+  display: none; /* Hide radio buttons */
+}
+
+.rating label {
+  font-size: 40px; /* Size of the stars */
+  color: #ccc; /* Default color for empty stars */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color 0.3s; /* Smooth transition on hover and select */
+  margin: 0 10px; /* Space between stars */
+  text-align: center; /* Align text properly */
+  position: relative;
+  display: inline-block;
+}
+
+/* When hovering or selecting, make all previous stars turn gold */
+.rating input[type="radio"]:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffb400; /* Gold color for filled stars */
+}
+
+/* When the input is checked (selected), apply gold color to all stars before it */
+.rating input[type="radio"]:checked ~ label {
+  color: #ffb400; /* Color when checked (gold) */
+}
+
+

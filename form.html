@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Product Review Form">
+        <meta name="author" content="Jeremy Sanders">
+        <link href="styles/form.css" rel="stylesheet">
+        <script src="scripts/form.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Product Review</title>
+    </head>
+
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+    <form id="reviewForm" method="get" action="review.html">
+        <!-- Product Name -->
+        <label for="productName">Product Name:</label>
+        <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+        </select><br><br>
+
+        <!-- Overall Rating -->
+        <label>Overall Rating:</label><br>
+        <div class="rating">
+        <!-- 1 Star -->
+        <input type="radio" id="rating1" name="rating" value="1">
+        <label for="rating1" class="star">★</label>
+        
+        <!-- 2 Stars -->
+        <input type="radio" id="rating2" name="rating" value="2">
+        <label for="rating2" class="star">★</label>
+        
+        <!-- 3 Stars -->
+        <input type="radio" id="rating3" name="rating" value="3">
+        <label for="rating3" class="star">★</label>
+        
+        <!-- 4 Stars -->
+        <input type="radio" id="rating4" name="rating" value="4">
+        <label for="rating4" class="star">★</label>
+        
+        <!-- 5 Stars -->
+        <input type="radio" id="rating5" name="rating" value="5">
+        <label for="rating5" class="star">★</label>
+        </div><br><br>
+
+        <!-- Date of Installation -->
+        <label for="installDate">Date of Installation:</label>
+        <input type="date" id="installDate" name="installDate" required><br><br>
+
+        <!-- Useful Features -->
+        <label>Which features did you find useful in the product? <span class="subtext">(select all that apply)</span></label>
+        <input type="checkbox" id="feature1" name="features" value="Durability">
+        <label for="feature1">Durability</label><br>
+        <input type="checkbox" id="feature2" name="features" value="Easy to Use">
+        <label for="feature2">Easy to Use</label><br>
+        <input type="checkbox" id="feature3" name="features" value="Performance">
+        <label for="feature3">Performance</label><br>
+        <input type="checkbox" id="feature4" name="features" value="Design">
+        <label for="feature4">Affordable</label><br><br>
+
+        <!-- Written Review -->
+        <label for="review">Written Review (optional):</label><br>
+        <textarea id="review" name="review"></textarea><br><br>
+
+        <!-- User Name -->
+        <label for="username">Your Name (optional):</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Post Review">
+    </form>
+    
+
+  </main>
+  <footer>
+    <p>@<span id="currentyear"></span>🐬Jeremy Sanders🐬North Carolina</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
