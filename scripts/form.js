@@ -1,6 +1,4 @@
 
-
-
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -19,33 +17,47 @@ products.forEach(product => {
     productSelect.appendChild(option);
 });
 
-// Form submission handler
+
 document.getElementById("reviewForm").addEventListener("submit", function (event) {
     event.preventDefault();
-    // Form data handling here, if necessary
 
-    // Redirect to review.html
-    window.location.href = this.action;
+    // Get form data
+    const productName = document.getElementById("productName").value;
+    const rating = document.querySelector('input[name="rating"]:checked') ? document.querySelector('input[name="rating"]:checked').value : '';
+    const installDate = document.getElementById("installDate").value;
+    const features = Array.from(document.querySelectorAll('input[name="features"]:checked')).map(checkbox => checkbox.value);
+    const reviewText = document.getElementById("review").value;
+    const username = document.getElementById("username").value;
+
+    // Construct query string
+    const queryString = new URLSearchParams({
+        productName,
+        rating,
+        installDate,
+        features: features.join(", "),  // Join array to display features properly
+        review: reviewText,
+        username
+    }).toString();
+
+    // Redirect to review.html with the data
+    window.location.href = `review.html?${queryString}`;
 });
 
-
-document.addEventListener("DOMContentLoaded", function() {
-   
+document.addEventListener("DOMContentLoaded", function () {
     const currentyear = new Date().getFullYear();
-    
     const lastModified = document.lastModified;
-    
+
     const currentYearElement = document.getElementById("currentyear");
     if (currentYearElement) {
-      currentYearElement.textContent = currentyear;
+        currentYearElement.textContent = currentyear;
     }
-  
+
     const lastModifiedElement = document.getElementById("lastModified");
     if (lastModifiedElement) {
-      lastModifiedElement.textContent = `Last modification on: ${lastModified}`;
+        lastModifiedElement.textContent = `Last modification on: ${lastModified}`;
     }
 
-
+    // Display data from URL params
     const urlParams = new URLSearchParams(window.location.search);
     document.getElementById("productNameDisplay").textContent = urlParams.get('productName');
     document.getElementById("ratingDisplay").textContent = urlParams.get('rating');
@@ -60,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
     localStorage.setItem("reviewCount", reviewCount);
     document.getElementById("reviewCount").textContent = reviewCount;
 });
-
-
 
   
     

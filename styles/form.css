@@ -120,9 +120,9 @@ form{
 .fa-fade,
 .fa-flip,
 .fa-spin {
-    animation-delay: var(--fa-animation-delay, 0s); /* Ensure valid time value */
+  animation-delay: var(--fa-animation-delay, 0s); 
 }
 
 .fa-rotate-by {
-    transform: rotate(var(--fa-rotate-angle, 0deg)); /* Ensure valid angle value */
+  transform: rotate(var(--fa-rotate-angle, 0deg)); 
 }
