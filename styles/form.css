@@ -81,37 +81,37 @@ form{
 }
 
 .rating {
-  display: flex; /* Align items horizontally */
-  justify-content: center; /* Center the stars */
+  display: flex;
+  justify-content: center; 
   align-items: center;
-  flex-direction: row; /* Ensure stars are displayed left to right */
+  flex-direction: row;
 }
 
 .rating input[type="radio"] {
-  display: none; /* Hide radio buttons */
+  display: none; 
 }
 
 .rating label {
-  font-size: 40px; /* Size of the stars */
-  color: #ccc; /* Default color for empty stars */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: color 0.3s; /* Smooth transition on hover and select */
-  margin: 0 10px; /* Space between stars */
-  text-align: center; /* Align text properly */
+  font-size: 40px; 
+  color: #ccc;
+  cursor: pointer; 
+  transition: color 0.3s; 
+  margin: 0 10px; 
+  text-align: center; 
   position: relative;
   display: inline-block;
 }
 
-/* When hovering or selecting, make all previous stars turn gold */
+
 .rating input[type="radio"]:checked ~ label,
 .rating label:hover,
 .rating label:hover ~ label {
-  color: #ffb400; /* Gold color for filled stars */
+  color: #ffb400; 
 }
 
-/* When the input is checked (selected), apply gold color to all stars before it */
+
 .rating input[type="radio"]:checked ~ label {
-  color: #ffb400; /* Color when checked (gold) */
+  color: #ffb400; 
 }
 
 
