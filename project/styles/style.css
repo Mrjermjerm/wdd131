@@ -1,4 +1,10 @@
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* Reset some basic styles */
 body {
@@ -7,6 +13,7 @@ body {
     color: #333333;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 /* Header styles */
@@ -55,19 +62,30 @@ h3 {
     color: #9B1B30;
 }
 
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10.2%;
+}
 
 
 nav {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-end; 
+    align-items: center;  
 }
 
 ul {
     list-style-type: none;
-    display: flex;
+    display: flex; 
     gap: 25px; 
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 li {
@@ -79,6 +97,7 @@ a {
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
+    font-size: 14.5px;
 }
 
 a:hover {
@@ -93,11 +112,11 @@ a:hover {
 }
 
 .search-bar {
-    padding: 8px 15px;
+    padding: 8px 10px;
     font-size: 1rem;
     border-radius: 5px;
     border: none;
-    width: 200px;
+    width: 150px;
     margin-left: 20px; 
 }
 
@@ -151,16 +170,13 @@ footer {
     text-align: center;
     position: relative;
     z-index: 10; 
+    margin-top: auto;
 }
 
 footer p {
     margin: 0;
 }
 
-/* Add underline to active link */
-a.active {
-    border-bottom: 3px solid #D1D1D1; 
-}
 
 /* Centered header */
 .centered-header {
@@ -218,7 +234,7 @@ a.active {
 
 nav a.active {
     text-decoration: underline;
-    font-weight: bold; /* Optional: makes the active link more prominent */
+    font-weight: bold; 
 }
 
 @media (max-width: 768px) {
